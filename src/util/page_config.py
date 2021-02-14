@@ -3,14 +3,12 @@ from json import loads
 
 
 @dataclass
-class CamConfig:
-    cam_id: int
-    desc: str
+class PageConfig:
     url: str
-    area: list
+    topic: str
 
     @staticmethod
     def from_file(file):
         with open(file) as f:
             dct = loads(f.read())
-            return CamConfig(int(dct["camID"]), dct["desc"], dct["url"], dct["area"])
+            return PageConfig(dct["url"], dct["topic"])

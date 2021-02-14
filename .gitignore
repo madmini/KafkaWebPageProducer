@@ -5,6 +5,14 @@
 # Local env file
 .env
 
-# Camera config (may contain sensitive URLs)
-cam_config.json
-sources.json
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Config (may contain sensitive URLs), except examples
+*_config.json
+!*_config_example.json
+
+# debug files
+pages/
